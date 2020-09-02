@@ -4,6 +4,7 @@ export default class Paladin { // medium
     this.attack = 40;
     this.speed = 30;
     this.defense = 40;
+    this.luck = 20;
   }
 
   attacking(modifier) {

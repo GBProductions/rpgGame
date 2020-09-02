@@ -1,4 +1,4 @@
-import {Assassin} from '../src/assassin.js';
+import Assassin from '../src/assassin.js';
 
 describe('Assassin', () => {
 

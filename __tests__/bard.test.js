@@ -1,4 +1,4 @@
-import {Bard} from '../src/bard.js';
+import Bard from '../src/bard.js';
 
 describe('Bard', () => {
 

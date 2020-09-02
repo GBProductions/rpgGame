@@ -1,4 +1,4 @@
-import {Paladin} from '../src/paladin.js';
+import Paladin from '../src/paladin.js';
 
 describe('Paladin', () => {
 

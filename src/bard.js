@@ -4,6 +4,7 @@ export default class Bard { // bad at everything
     this.attack = 20;
     this.speed = 20;
     this.defense = 20;
+    this.luck = 20;
   }
 
   attacking(modifier) {

@@ -1,4 +1,4 @@
-import {Barbarian} from '../src/barbarian.js';
+import Barbarian from '../src/barbarian.js';
 
 describe('Barbarian', () => {
 
