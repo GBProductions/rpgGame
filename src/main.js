@@ -10,24 +10,8 @@ import Assassin from './assassin.js';
 import Barbarian from './barbarian.js';
 
 $(document).ready(function() {
-  
-  let test = new Wizard();
-  
-  //alert(test.health);
-  let test1 = new Assassin();
-  
-  //alert(test1.health);
-  let test2 = new Barbarian();
-  
-  //alert(test2.health);
-  let test3 = new Bard();
-  
-  //alert(test3.health);
-  let test4 = new Paladin();
-  
-  //alert(test4.health);
-
-  let diceTest = new Game();
-  alert(diceTest.rollDice(6));
+  $("#game-start").click(function() {
+    $("#show-game-title").hide();
+  });
 
 });
