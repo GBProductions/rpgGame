@@ -12,6 +12,7 @@ export default class Bard { // bad at everything
 
   blocking(modifier) {
     return modifier + this.defense;
+    
   }
 
 }
