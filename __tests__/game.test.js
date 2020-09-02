@@ -78,12 +78,27 @@ describe('Game', () => {
 
   test('checking that damage was dealt after an attack', () => {
     game.nextTurn();
+    //game.nextTurn();
     for(let i = 0; i < 10; i++) {
       console.log(game.attack(game.getAttackingPlayer(), game.getDefendingPlayer()));
  
     }
     expect(game.attack(game.getAttackingPlayer(), game.getDefendingPlayer())).toBeGreaterThanOrEqual(1);
   
-    
+     
 });
+  test('checking that correct player is attacking', () => {
+  
+    expect(game.getAttackingPlayer()).toMatchObject(game.players[game.playersTurnIndex]);
+
+   
+  });
+  test('checking that correct player is defending', () => {
+  
+    expect(game.getDefendingPlayer()).toMatchObject(game.players[game.playersTurnIndex + 1]);
+
+   
+  });
+
+
 });

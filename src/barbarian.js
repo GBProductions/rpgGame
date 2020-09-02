@@ -4,6 +4,7 @@ export default class Barbarian { //more health, tank
     this.attack = 50;
     this.speed = 10;
     this.defense = 50;
+    this.luck = 7;
   }
 
   attacking(modifier) {

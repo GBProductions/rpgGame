@@ -4,7 +4,7 @@ export default class Wizard {
     this.attack = 70;
     this.speed = 20;
     this.defense = 40;
-    this.luck = 20;
+    this.luck = 12;
   }
 
   attacking(modifier) {

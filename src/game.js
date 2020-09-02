@@ -5,9 +5,9 @@ export default class Game {
   }
 
   attack(attackingPlayer, defendingPlayer) {
-    let sides = 6; //add 
-    let modifierAttack = this.rollDice(sides);//figure out sides
-    let modifierDefend = this.rollDice(sides);//figure out sides
+    let sides = attackingPlayer.luck; 
+    let modifierAttack = this.rollDice(sides);
+    let modifierDefend = this.rollDice(sides);
     let damageDealt = attackingPlayer.attacking(modifierAttack) - defendingPlayer.blocking(modifierDefend);
     defendingPlayer.health -= damageDealt;
     if(damageDealt <= 0) {
@@ -49,9 +49,23 @@ export default class Game {
     if(this.playersTurnIndex >= this.players.length - 1){
       return this.players[0];
     } else {
-      return this.players[this.playersTurnIndex];
+      return this.players[this.playersTurnIndex + 1];
     }
 
+  }
+
+  checkDeath(){
+    for (let i =0; i < this.players.length; i++) {
+      if (this.player[i].health <= 0) {
+        return i;
+      } 
+    }
+    return -1;
+  }
+
+  resetGame(){
+    this.players = [];
+    this.playersTurnIndex = 0;
   }
 
 }
