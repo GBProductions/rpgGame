@@ -75,40 +75,50 @@
   </div>
   <div id="fight-page">
     <h1 class="jumbotron title">Fight</h1>
-    
-    
-
-  <div class="row">
-    <div class="col-6">
-      <div class="card">
-          <h3 class="card-header" id="character1"></h3>
-          <div class="card-body">
-              <div class="progress">
-                <div id="health-bar-player1" class="progress-bar" style="width: 100%"></div>
-              </div>
-            <ul id="player1-stats"></ul>
-            <button class="btn btn-outline-dark" id="attack1">Attack</button>
-          </div>  
+    <div class="row">
+      <div class="col-6">
+        <div class="card">
+            <h3 class="card-header" id="character1"></h3>
+            <div class="card-body">
+                <div class="progress">
+                  <div id="health-bar-player1" class="progress-bar" style="width: 100%"></div>
+                </div>
+              <ul id="player1-stats"></ul>
+              <button class="btn btn-outline-dark" id="attack1">Attack</button>
+            </div>  
+        </div>
       </div>
-    </div>
-    <div class="col-6">
-      <div class="card">
-        <h3 class="card-header" id="character2"></h3>
-        <div class="card-body">
-          <div class="progress">
-            <div id="health-bar-player2" class="progress-bar" style="width: 100%"></div>
+      <div class="col-6" id="player2">
+        <div class="card">
+          <h3 class="card-header" id="character2"></h3>
+          <div class="card-body">
+            <div class="progress">
+              <div id="health-bar-player2" class="progress-bar" style="width: 100%"></div>
+            </div>
+            <ul id="player2-stats"></ul>
+            <button class="btn btn-outline-dark" id="attack2">Attack</button>
           </div>
-          <ul id="player2-stats"></ul>
-          <button class="btn btn-outline-dark" id="attack2">Attack</button>
         </div>
       </div>
     </div>
-  </div>
     <p id="attack-roll"></p>
     <p id="defense-roll"></p>
     <p id="damage"></p>
   </div>
-  <button class="btn btn-outline-dark" id="reset">REPLAY</button>
+  <div id="winners-page">
+    <h1 class="jumbotron title">WINNER</h1>
+    <div class="card">
+      <h3 class="card-header" id="winner-output"></h3>
+      <div class="card-body">
+        <div class="progress">
+          <div id="health-bar-winner" class="progress-bar" style="width: 100%"></div>
+        </div>
+        <ul id="winner-stats"></ul>
+      </div>
+    </div>
+    <button class="btn btn-outline-dark btn-block" id="reset">REPLAY?</button>
+  </div>
+  
 </div>
 
 </body>

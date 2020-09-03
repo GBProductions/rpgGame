@@ -5,8 +5,8 @@ export default class Game {
   }
 
   attack(attackingPlayer, defendingPlayer) {
-     let modifierAttack = this.rollDice(attackingPlayer.luck);
-     let modifierDefend = this.rollDice(defendingPlayer.luck);
+     let modifierAttack = this.rollDice((attackingPlayer.luck + attackingPlayer.attack) / 3);
+     let modifierDefend = this.rollDice((defendingPlayer.luck + defendingPlayer.defense) / 4);
     let damageDealt = attackingPlayer.attacking(modifierAttack) - defendingPlayer.blocking(modifierDefend);
   
     if(damageDealt <= 0) {
@@ -68,6 +68,18 @@ export default class Game {
     for (let i =0; i < this.players.length; i++) {
       if (this.players[i].health <= 0) {
         return i;
+      } 
+    }
+    return -1;
+  }
+  checkWinner(){
+    for (let i =0; i < this.players.length; i++) {
+      if (this.players[i].health <= 0) {
+        if(i === 0) {
+          return 1;
+        } else {
+          return 0;
+        }
       } 
     }
     return -1;

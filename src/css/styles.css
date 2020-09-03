@@ -21,6 +21,14 @@
   display: none;
 }
 
-#reset{
-  display: none;
+
+#health-bar-player2{
+  background-color: green;
+}
+#health-bar-player1{
+  background-color: green;
+}
+
+#winners-page{
+display: none;
 }

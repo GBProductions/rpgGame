@@ -1,12 +1,12 @@
-export default class Wizard {
+export default class Mage {
   constructor(){
-    this.classType = 'Wizard';
+    this.classType = 'Mage';
     this.startingHealth = 60;
     this.health = 60;
-    this.attack = 70;
-    this.speed = 20;
-    this.defense = 40;
-    this.luck = 12;
+    this.attack = 30;
+    this.speed = 2;
+    this.defense = 30;
+    this.luck = 80;
   }
 
   attacking(modifier) {
