@@ -25,3 +25,4 @@ Fortify/Heal
 
 Items (ie potions, armor, upgrades)
 
+continuous game with bard npc that drop items
