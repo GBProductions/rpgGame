@@ -1,5 +1,6 @@
 export default class Wizard {
   constructor(){
+    this.classType = 'Wizard';
     this.health = 60;
     this.attack = 70;
     this.speed = 20;

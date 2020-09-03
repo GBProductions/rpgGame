@@ -2,3 +2,25 @@
   background: white; 
   text-align: center
 }
+
+#game {
+  display: none;
+}
+
+#character-confirmation{
+  display: none;
+}
+#fight-page{
+  display: none;
+}
+
+#character2 {
+  text-align: right;
+}
+#attack2{
+  display: none;
+}
+
+#reset{
+  display: none;
+}

@@ -1,10 +1,11 @@
 export default class Assassin { // high damage and speed
   constructor(){
+    this.classType = 'Assassin';
     this.health = 60;
     this.attack = 65;
     this.speed = 80;
     this.defense = 20;
-    this.luck = 20;
+    this.luck = 60;
   }
 
   attacking(modifier) {

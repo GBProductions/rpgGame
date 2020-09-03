@@ -1,5 +1,6 @@
 export default class Paladin { // medium
   constructor(){
+    this.classType = 'Paladin';
     this.health = 80;
     this.attack = 40;
     this.speed = 30;

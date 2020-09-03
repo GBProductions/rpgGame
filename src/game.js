@@ -5,15 +5,18 @@ export default class Game {
   }
 
   attack(attackingPlayer, defendingPlayer) {
-    let sides = attackingPlayer.luck; 
-    let modifierAttack = this.rollDice(sides);
-    let modifierDefend = this.rollDice(sides);
+     let modifierAttack = this.rollDice(attackingPlayer.luck);
+     let modifierDefend = this.rollDice(defendingPlayer.luck);
     let damageDealt = attackingPlayer.attacking(modifierAttack) - defendingPlayer.blocking(modifierDefend);
-    defendingPlayer.health -= damageDealt;
+  
     if(damageDealt <= 0) {
       damageDealt = 1;
     }
-   return damageDealt;
+    defendingPlayer.health -= damageDealt;
+    if(defendingPlayer.health < 0){
+      defendingPlayer.health = 0;
+    }
+   return [damageDealt, modifierAttack, modifierDefend];
   }
   nextTurn() {
     if(this.playersTurnIndex >= this.players.length - 1) {
@@ -42,6 +45,13 @@ export default class Game {
     });
 
   }
+  findHighestSpeed(){
+    if(this.players[0].speed >= this.players[1].speed){
+      return 0;
+    } else {
+      return 1;
+    }
+  }
   getAttackingPlayer(){
     return this.players[this.playersTurnIndex];
   }
@@ -56,7 +66,7 @@ export default class Game {
 
   checkDeath(){
     for (let i =0; i < this.players.length; i++) {
-      if (this.player[i].health <= 0) {
+      if (this.players[i].health <= 0) {
         return i;
       } 
     }

@@ -8,12 +8,107 @@
 <div class="container">
   <div id="show-game-title">
     <h1 class="jumbotron title">THE GREATEST RPG EVER MADE</h1>
-    <button type="submit" id="game-start" class="btn btn-secondary btn-block">Start Game</button>
+    <button type="submit" id="game-start" class="btn btn-outline-dark btn-block">Start Game</button>
   </div>
 
   <div id="game">
-    
+    <h1 class="jumbotron title">CHOOSE A CHARACTER for player <span id="playerID">1</span>.</h1>
+    <div class="card-group">
+      <div class="card">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">The Wizard</h5>
+          <p class="card-text">Wizard description.</p>
+          <button type="submit" id="wizard" class="btn btn-outline-dark btn-block">Choose the Wizard</button>
+        </div>
+      </div>  
+      <div class="card">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">The Paladin</h5>
+          <p class="card-text">Paladin description.</p>
+          <button type="submit" id="paladin" class="btn btn-outline-dark btn-block">Choose the Paladin</button>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">The Assassin</h5>
+          <p class="card-text">Assassin description.</p>
+          <button type="submit" id="assassin" class="btn btn-outline-dark btn-block">Choose the Assassin</button>
+        </div>
+      </div>
+    </div>
+
+      <div class="card-group">
+        <div class="card">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">The Barbarian</h5>
+            <p class="card-text">Barbarian description.</p>
+            <button type="submit" id="barbarian" class="btn btn-outline-dark btn-block">Choose the Barabarian</button>
+          </div>
+        </div>  
+        <div class="card">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">The Bard</h5>
+            <p class="card-text">Bard description.</p>
+            <button type="submit" id="bard" class="btn btn-outline-dark btn-block">Choose the Bard</button>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">The Mage</h5>
+            <p class="card-text">Mage description</p>
+            <button type="submit" id="mage" class="btn btn-outline-dark btn-block">Choose the Mage</button>
+          </div>
+        </div>
+      </div>
+  </div>  
+  <div id="character-confirmation">
+    <h1 class="jumbotron title">Character Confirmation</h1>
+    <h3 id="characters"></h3>
+    <button class="btn btn-outline-dark" id="fight-start">Start Fight</button>
+    <button class="btn btn-outline-dark" id="change-character">Change Character</button>
   </div>
+  <div id="fight-page">
+    <h1 class="jumbotron title">Fight</h1>
+    
+    
+
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+          <h3 class="card-header" id="character1"></h3>
+          <div class="card-body">
+              <div class="progress">
+                <div id="health-bar-player1" class="progress-bar" style="width: 100%"></div>
+              </div>
+            <ul id="player1-stats"></ul>
+            <button class="btn btn-outline-dark" id="attack1">Attack</button>
+          </div>  
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="card">
+        <h3 class="card-header" id="character2"></h3>
+        <div class="card-body">
+          <div class="progress">
+            <div id="health-bar-player2" class="progress-bar" style="width: 100%"></div>
+          </div>
+          <ul id="player2-stats"></ul>
+          <button class="btn btn-outline-dark" id="attack2">Attack</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <p id="attack-roll"></p>
+    <p id="defense-roll"></p>
+    <p id="damage"></p>
+  </div>
+  <button class="btn btn-outline-dark" id="reset">REPLAY</button>
 </div>
 
 </body>
